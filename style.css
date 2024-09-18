@@ -1,0 +1,60 @@
+@import url("https://fonts.googleapis.com/css2?family=Nerko+One&family=Protest+Guerrilla&family=Special+Elite&display=swap");
+body {
+  position: relative;
+  background-image: url(./nasa-1lfI7wkGWZ4-unsplash.jpg);
+  min-height: 100vh;
+}
+.video-background {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  object-fit: cover;
+  z-index: -2;
+  filter: contrast(1);
+}
+.btn-register {
+  background-color: #35353582;
+  border: 0.7px solid #00d4ff;
+  color: #00d4ff;
+  box-shadow: 1px 2px 2px #00d4ff;
+
+  &:hover {
+    box-shadow: -1px -2px 2px #00d4ff;
+    color: #00d4ff;
+    border: 0.7px solid #00d4ff;
+  }
+}
+
+.paragraph {
+  color: #f31717;
+  font-weight: bold;
+}
+
+.modal-content {
+  background-color: #2f3d5c00 !important;
+  color: #d4f8ff;
+  box-shadow: 3px 3px 20px #d4f8ff;
+}
+
+.modal-header .btn-close {
+  background-color: #00d4ff;
+}
+.login__title {
+  font-family: "Nerko One";
+}
+#title {
+  font-family: "Nerko One";
+}
+.btn-div {
+  font-family: "Special Elite", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #d4f8ff;
+  gap: 30px;
+  height: 80vh;
+  transition: all 0.7s ease;
+}

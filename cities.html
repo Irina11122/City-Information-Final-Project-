@@ -35,31 +35,34 @@
     </div>
 
     <!-- Modal -->
-    <div
-      class="modal fade"
-      id="cityModal"
-      tabindex="-1"
-      aria-labelledby="cityModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div id="modalHeader" class="modal-header">
-            <h5 class="modal-title" id="cityModalLabel">Modal title</h5>
+    <div class="modal fade" id="cityModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content text-dark">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalCityName">City Name</h5>
             <button
               type="button"
               class="btn-close"
               data-bs-dismiss="modal"
-              aria-label="Close"
             ></button>
           </div>
-          <div id="cityModalBody" class="modal-body"></div>
-          <div id="modalFooter" class="modal-footer"></div>
+          <div class="modal-body">
+            <img
+              id="modalImage"
+              class="img-fluid mb-3"
+              src=""
+              alt="City Image"
+            />
+            <p><strong>Country:</strong> <span id="modalCountry"></span></p>
+            <p><strong>Timezone:</strong> <span id="modalTimezone"></span></p>
+            <p>
+              <strong>Description:</strong> <span id="modalDescription"></span>
+            </p>
+          </div>
         </div>
       </div>
     </div>
 
-    <!-- Add city -->
     <div
       class="modal fade"
       id="exampleModal"

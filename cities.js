@@ -13,6 +13,22 @@ async function myData() {
 }
 
 const citiesRow = document.getElementById("citiesRow");
+function showCityModal(id) {
+  console.log("Looking for city ID:", id);
+  console.log("All cities:", cities);
+
+  const city = cities.find((c) => String(c.id) === String(id));
+  if (!city) {
+    console.error("City not found!");
+    return;
+  }
+
+  document.getElementById("modalCityName").innerText = city.cityName;
+  document.getElementById("modalCountry").innerText = city.countryName;
+  document.getElementById("modalTimezone").innerText = city.timeZone;
+  document.getElementById("modalDescription").innerText = city.description;
+  document.getElementById("modalImage").src = city.image;
+}
 
 function showCity(cityList) {
   if (!citiesRow) return console.error("citiesRow element not found!");
@@ -29,15 +45,18 @@ function showCity(cityList) {
             <p>${item.timeZone}</p>
           </div>
           <div class="card-footer">
-            <button type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#cityModal" onclick="showCityModal(${item.id})">
-              See description
-            </button>
+            <button type="button" class="btn btn-outline-light"
+  data-bs-toggle="modal"
+  data-bs-target="#cityModal"
+  onclick='showCityModal("${item.id}")'>
+  See description
+</button>
+
           </div>
         </div>
       </div>`;
   });
 }
-
 document.addEventListener("DOMContentLoaded", async () => {
   cities = await myData();
   showCity(cities);
@@ -148,3 +167,4 @@ document.addEventListener("DOMContentLoaded", async () => {
     window.location.href = "index.html";
   });
 });
+window.showCityModal = showCityModal;

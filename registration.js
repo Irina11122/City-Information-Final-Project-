@@ -1,4 +1,4 @@
-const usersAPI = "https://66c4c5c0b026f3cc6cf0a1d8.mockapi.io/api/users";
+const usersAPI = "https://6894fe76be3700414e151a1e.mockapi.io/users";
 const registrationBtn = document.getElementById("registrationBtn");
 const video = document.getElementById("videoBg");
 window.addEventListener("click", () => {
@@ -57,11 +57,7 @@ registerSubmit.addEventListener("click", async (e) => {
   } else {
     emailError.innerText = "";
   }
-  if (
-    !phoneNumberInput.match(
-      /^(\+?\d{1,4}[-.\s]?)?(\d{3}[-.\s]?\d{3}[-.\s]?\d{4})$/
-    )
-  ) {
+  if (!phoneNumberInput.match(/^\+?[\d\s\-().]{7,20}$/)) {
     phoneNumberError.innerText = "The phone number is incorrect";
   } else {
     phoneNumberError.innerText = "";
